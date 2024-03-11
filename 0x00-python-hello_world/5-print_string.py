@@ -3,4 +3,4 @@ str = "Holberton School"
 print(str)
 print(str)
 print(str)
-print(str[:8])
+print(str[:9])

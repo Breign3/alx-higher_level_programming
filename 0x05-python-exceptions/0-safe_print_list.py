@@ -10,12 +10,13 @@ Arguments:
 Returns:
 The number of elements printed.
 """
-        y = 0
-    for i in range(x):
+            count = 0
+    for item in range(x):
         try:
-            print("{}".format(my_list[i]), end="")
-            y += 1
+            print(my_list[item], end='')
         except IndexError:
             break
-    print("")
-    return (y)
+        else:
+            count += 1
+    print()
+    return count

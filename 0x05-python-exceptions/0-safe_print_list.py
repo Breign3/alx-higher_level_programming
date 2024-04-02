@@ -1,20 +1,19 @@
-#!/usr/bin/python3
-def safe_print_integer(value):
-    """Print an integer with "{:d}".format().
+    """Print x elememts of a list.
 
     Args:
-        value (int): The integer to print.
+        my_list (list): The list to print elements from.
+        x (int): The number of elements of my_list to print.
 
     Returns:
-        If a TypeError or ValueError occurs - False.
-        Otherwise - True.
-    """
-    ret = 0
+        The number of elements printed."""
+
+def safe_print_list(my_list=[], x=0):
+        x = 0
     for i in range(x):
         try:
             print("{}".format(my_list[i]), end="")
-            ret += 1
+            x += 1
         except IndexError:
             break
     print("")
-    return (ret)
+    return (x)

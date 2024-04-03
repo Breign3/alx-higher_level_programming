@@ -1,20 +1,15 @@
 #!/usr/bin/python3
 
-def safe_print_division(a, b):
-
-    """Print an integer with "{:d}".format()
-
-            Args:
-            a: Integer
-            b: Integer
-
-        Returns: The value of the division, otherwise: None
+def safe_print_integer(value):
+    """Print an integer with "{:d}".format().
+    Args:
+        value (int): The integer to print.
+    Returns:
+        If a TypeError or ValueError occurs - False.
+        Otherwise - True.
     """
-    quotient = None
     try:
-        quotient = a / b
-        print("Inside result: {}".format(quotient))
-    except:
-        print("Inside result: {}".format(quotient))
-    finally:
-        return quotient
+        print("{:d}".format(value))
+        return (True)
+    except (TypeError, ValueError):
+        return (False)

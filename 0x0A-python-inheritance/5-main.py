@@ -5,4 +5,4 @@ bg = BaseGeometry()
 
 print(bg)
 print(dir(bg))
-print(dir(BaseGeometry)
+print(dir(BaseGeometry))

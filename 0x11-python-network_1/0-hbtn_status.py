@@ -1,18 +1,12 @@
 #!/usr/bin/python3
-"""Fetches https://intranet.hbtn.io/status."""
-
-from urllib.request import Request, urlopen
+"""Fetches https://alx-intranet.hbtn.io/status"""
+import urllib.request
 
 
 if __name__ == "__main__":
-    url = 'https://alx-intranet.hbtn.io/status'
-    request = Request(url)
-
-    with urlopen(request) as response:
-        raw_content = response.read()
-        decoded_content = raw_content.decode('utf-8')
+    request = urllib.request.Request("https://alx-intranet.hbtn.io/status")
+    with urllib.request.urlopen(request) as response:
         body = response.read()
-
         print("Body response:")
         print("\t- type: {}".format(type(body)))
         print("\t- content: {}".format(body))
